@@ -1,8 +1,9 @@
-const ErrorHandler = (message, statusCode) => {
-  const error = new Error(message);
-  error.statusCode = statusCode;
-  return error;
-};
+class ErrorHandler extends Error {
+  constructor(message, statusCode) {
+    super(message);
+    this.statusCode = statusCode;
+  }
+}
 
 export const errorMiddleware = (err, req, res, next) => {
   err.message = err.message || "Internal Server Error";
