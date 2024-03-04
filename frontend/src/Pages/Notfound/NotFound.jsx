@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import "../styles/notfound.css";
+import "../../styles/notfound.css";
 
 const NotFound = () => {
   return (
