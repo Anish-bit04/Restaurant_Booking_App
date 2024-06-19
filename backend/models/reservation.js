@@ -16,11 +16,11 @@ const reservationSchema = new mongoose.Schema({
   },
   date: {
     type: String,
-    required: true,
+    // required: true,
   },
   time: {
     type: String,
-    required: true,
+    // required: true,
   },
   email: {
     type: String,
@@ -29,7 +29,7 @@ const reservationSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: true,
+    // required: true,
     minLength: [10, "Phone number must be of at least 10 Digits."]
   
   },
