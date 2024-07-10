@@ -16,11 +16,10 @@ const reservationSchema = new mongoose.Schema({
   },
   date: {
     type: String,
-    // required: true,
+    default:Date.now()
   },
   time: {
     type: String,
-    // required: true,
   },
   email: {
     type: String,
@@ -29,10 +28,21 @@ const reservationSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    // required: true,
     minLength: [10, "Phone number must be of at least 10 Digits."]
   
   },
 });
+
+
+//post middleware
+reservationSchema.post("save", async function(doc){
+  try{
+    console.log(doc);
+  }
+  catch(error){
+    console.log("error occured while sending the reservation mail",error.message);
+  }
+});
+
 
 export const Reservation = mongoose.model("Reservation", reservationSchema);

@@ -1,23 +1,23 @@
-import React from 'react'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import Home from './Pages/Home/Home';
-import NotFound from './Pages/Notfound/NotFound';
-import Success from './Pages/Success/Success';
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+import Menu from "./pages/menu"
+import Cart from "./pages/Cart"
+import Home from "./pages/Home";
+import Success from "./pages/Success";
+import NotFound from "./pages/NotFound";
 import './App.css'
+
 const App = () => {
-  return (
-    <>
-      <Router>
+  return (<div>
+        
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path="/menu" element={<Menu/>} />
+          <Route path="/cart" element={<Cart/>} />
           <Route path='/success' element={<Success/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
-        <Toaster/>
-      </Router>
-    </>
-  )
-}
+  </div>)
+};
 
-export default App
+export default App;

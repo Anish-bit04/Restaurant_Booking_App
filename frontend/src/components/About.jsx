@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import "../styles/about.css";
 
@@ -14,20 +14,16 @@ const About = () => {
               <p>The only thing we're serious about is food.</p>
             </div>
             <p className="mid">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Provident possimus optio adipisci dolores impedit illum iusto
-              perferendis, laudantium quod accusamus consequuntur consectetur,
-              tempore nulla error iure reiciendis dolorem assumenda.
-              Necessitatibus fugit asperiores totam rem esse exercitationem
-              iusto ipsum qui dolore ex, accusantium repellat mollitia
-              repellendus.
-            </p>
-            <Link to={"/"}>
+            Welcome to FOODHUNT, where culinary excellence meets exceptional service. Nestled in the heart of Jodhpur(RAJ.),
+             our restaurant is a haven for food enthusiasts seeking a memorable dining experience. 
+             Founded in 2020, we believe in the power of food to bring people together. Our journey began with a passion for creating dishes that not only satisfy the palate but also tell a story.
+                    </p>
+              <NavLink to={"/menu"}>
               Explore Menu{" "}
               <span>
                 <HiOutlineArrowRight />
               </span>
-            </Link>
+            </NavLink>
           </div>
           <div className="banner">
             <img src="about.png" alt="about" />

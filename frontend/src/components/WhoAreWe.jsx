@@ -1,5 +1,5 @@
 import React from 'react'
-import { data } from "../../restApi.json";
+import  data  from '../restApi.json';
 import '../styles/whoarewe.css'
 
 const WhoAreWe = () => {
@@ -9,7 +9,7 @@ const WhoAreWe = () => {
         <div className="container">
           <div className="text_banner">
             {
-              data[0].who_we_are.slice(0,2).map(element=>(
+              data.data[0].who_we_are.slice(0,2).map(element=>(
                 <div className="card" key={element.id}>
                   <h1 className='heading' style={{fontWeight: "300"}}>{element.number}</h1>
                   <p>{element.title}</p>
@@ -23,7 +23,7 @@ const WhoAreWe = () => {
           </div>
           <div className="text_banner">
             {
-              data[0].who_we_are.slice(2).map(element=>(
+              data.data[0].who_we_are.slice(2).map(element=>(
                 <div className="card" key={element.id}>
                   <h1 className='heading' style={{fontWeight: "300"}}>{element.number}</h1>
                   <p>{element.title}</p>

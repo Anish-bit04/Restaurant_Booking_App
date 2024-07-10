@@ -4,9 +4,6 @@ import { Reservation } from "../models/reservation.js";
 
 const send_reservation = async (req, res, next) => {
   const { firstName, lastName, email, date, time, phone } = req.body;
-  // if (!firstName || !lastName || !email || !date || !time || !phone) {
-  //   return next(new ErrorHandler("Please Fill Full Reservation Form!", 400));
-  // }
 
   try {
     await Reservation.create({ firstName, lastName, email, date, time, phone });
@@ -25,6 +22,7 @@ const send_reservation = async (req, res, next) => {
     return next(error);
   }
 };
+
 
 
 export default send_reservation;

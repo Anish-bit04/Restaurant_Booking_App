@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../../restApi.json";
+import  data  from '../restApi.json';
 import "../styles/team.css";
 
 const Team = () => {
@@ -9,13 +9,12 @@ const Team = () => {
         <div className="heading_section">
           <h1 className="heading">OUR TEAM</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            fugit dicta, ipsum impedit quam laboriosam quas doloremque quia
-            perferendis laborum.
+          Our team is a passionate blend of culinary experts and dedicated service professionals. United by a love for exceptional food, 
+          we strive to create memorable dining experiences. With creativity and care, we bring each dish to life, ensuring every visit is extraordinary. 
           </p>
         </div>
         <div className="team_container">
-          {data[0].team.map((element) => {
+          {data.data[0].team.map((element) => {
             return (
               <div className="card" key={element.id}>
                 <img src={element.image} alt={element.name} />

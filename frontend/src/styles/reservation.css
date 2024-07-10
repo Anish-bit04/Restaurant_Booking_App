@@ -4,7 +4,7 @@
     padding: 30px 20px;
     justify-content: center;
     align-items: center;
-    background: url(/reserve.svg);
+    background: url(../../public/reserve.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
